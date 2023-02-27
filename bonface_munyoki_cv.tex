@@ -1,194 +1,202 @@
-\documentclass[margin, line]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+%-------------------------
+% Resume in Latex
+% Author : B. Munyoki Kilyungi
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\usepackage{helvet} % Default font is the helvetica postscript font
-%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 \input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-\setlength{\textwidth}{5.2in} % Text width of the document
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{
+  {#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+    \small#3 & #4 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
-%----------------------------------------------------------------------------------------
-%       NAME AND ADDRESS SECTION
-%----------------------------------------------------------------------------------------
 
-\moveleft.5\hoffset\centerline{\large\bf Bonface Munyoki K.} % Your name at the top
+\begin{center}
+  \textbf{\Huge \scshape Munyoki Kilyungi} \\ \vspace{1pt}
+  \href{mailto:me [at] bonfacemunyoki [dot] com}{\underline{me [at] bonfacemunyoki [dot] com}} $|$ \href{https://bonfacemunyoki.com}{\underline{bonfacemunyoki.com}} $|$ \href{https://github.com/BonfaceKilz}{\underline{github:BonfaceKilz}} \\
+  \small mobile:\underline{+254~797~111~111}
+\end{center}
 
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
-
-\moveleft.5\hoffset\centerline{\url{https://bonfacemunyoki.com} | \url{https://github.com/BonfaceKilz}}
-
-%% Encrypted mail block; comment out and de-crypt to use
-%% -----BEGIN PGP MESSAGE-----
-
-%% hQIMA7yEhhvnouawAQ//VyP4ewVKv7AmqQ2uoON53GYkx2BkaNQiiiDvYQbbL9UE
-%% VwHEg5E2oFL0ek9Bl2y9LAZuoy1RCaXeUT0tGIbCpEyjmyWriZQFGZv1DYr+Tu3i
-%% CVpYOX7VBVyuwCPBD4jfZiYOXIStDGJ9p/AEcNzS4ic/giOSUK+gAUs6OpsLeIq1
-%% Mg9KQywhfGLl0vKvTNoqCkGRgnLSoEnjhmK2n6G+cI2aehymZYLIKAzye3Yj02Xn
-%% jOh/f1qgt1kbA6DmXzz3mCzXWgGwRaUnsfAzzUs+2LTIHd0jHNE3GVjdbtu7+pc0
-%% DM4k8wq0DFMl1ITRhB8fQZaaG1z+Ni104HxcEfGEhX9z0YTBt1KhNjeHOKQQuobL
-%% K9SYu0/lePECBNpeDCeWxg7JR4atoPK38/nhEN0idRhNwczesuckkipOixSKGJ+J
-%% RDUyd8G6L8ZxOdgwvuQ9ht3NCQTiNRoGtDxlvjkdwB4SlDeav20g9XCjHFXI6BlX
-%% wihFT0qmkTJRm49Vw0TRLrHatNeFwSzXRL+lTCv44oFM1D0bhWjCCEFapVVQiar8
-%% mw/TGrBkcBn5ey8ShX7t6zT7wC/FsFeVQMtkGm0RrrRQJSyhDj4zFYx++JcyXdeZ
-%% 7b76TAiznHskO75dARK8t28viFCpbYCmwTS1IEjWs0Hs3l6rUSRDRkkGz3MvnW/S
-%% jAEc+fIoaUdpD1OzCukc96GFTZUkWs8G5/FsIn4nfeubS56V5UI26vp2ETaPDzRa
-%% u8yjnOgQ8eskJMZ/1gbmaQundlSpr2Rnn7t06Dgku853EMCG2UK8uge8ExCOJ8He
-%% OUQHuDcoEP2jxRe1vDJB4Bas/y5evB+14Qxa8u+ZA+IpYQNoVaEiln1zBIkw
-%% =HSxg
-%% -----END PGP MESSAGE-----
-
-\moveleft.5\hoffset\centerline{\url{anon@anon.com},  +254 712-123-123}
-
-\textbf{\textit{Snake Charmer by Day/ SPEL\footnote{SPEL(Semantic Program Enhancement Logic): A concept around LISP macros proposed by Conrad Barski. See: \url{https://lfe.io/books/casting-spels/addenda/whyspels.html}} caster by night.}}
-
-\section{SKILLS}
-\textbf{Programming Languages (advanced):} Python, JavaScript, Elisp, Racket, Guile\\
-\textbf{Programming Languages (basic):} Rust, Elm, CLisp, Haskell, Purescript\\
-\textbf{Other:} GNU/Linux, GUIX, FreeBSD, GNU Emacs, Org-mode, \LaTeX,
-Hardware Hacking, Typography
-
-%----------------------------------------------------------------------------------------
-%       PROFESSIONAL EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+Research software developer who is deeply committed to the principles of the free software community and is passionate about GNU/Linux, functional programming, meta-programming, software packaging, reproducible builds/deployments, system design and empowering minorities in technology.
 
 
-\section{PROFESSIONAL EXPERIENCE}
-
-{\sl Software Developer} \hfill March 2020 - Current \\
-\textbf{Gene} \hfill \url{https://thebird.nl/blog/work/group.html} \\
-\textbf{Network} \hfill \url{http://gn1.genenetwork.org/webqtl/main.py}
-
-\begin{itemize} \itemsep -2pt
-\item Research and maintain deterministic builds on GNU Guix for
-  bio-informatics packages(\url{https://is.gd/MWEmyv}): Create new
-  package definitions for packages requested by the team or other
-  researchers who rely on our packages; keep track of upstream
-  packages and update packages where necessary; and trouble-shoot
-  build failures.
-\item Maintaining
-  Genenetwork2(\url{https://github.com/genenetwork/genenetwork2}) by:
-  continuously refactoring the code base to improve it's quality;
-  adding new features requested by the project's stake holders;
-  reviewing, approving, and merging submitted Pull Requests; and
-  maintaining the current CI setup used for tests.
-\item Work on
-  Genenetwork3(\url{https://github.com/genenetwork/genenetwork3}) REST
-  API for data science and machine learning to make it more accessible
-  to researchers in the systems genetics space: Move key logic from
-  the archived genenetwork1 code-base; remodel some aspects of our data
-  model; create endpoints that perform genetics computations; review,
-  approve, and merge submitted pull requests;
-\item Work on Sheepdog(WIP) which is both a monitoring and
-  orchestration tool:
-  (\url{https://git.genenetwork.org/free/sheepdog})
-\item Help organise webinars/ presentations organised by the
-  Genenetwork group e.g. FOSDEM 2021 (\url{https://is.gd/uMxBss})
-\item Occasionally troubleshoot upstreamed(in GNU Guix) or update
-  packaged software, and whenever possible submit e-mail patches for
-  packaged programs in the relevant upstream repository
-  (\url{https://is.gd/6kqnQg}).
-\end{itemize}
-
-%% {\sl Software Engineering Consultant} \hfill November 2019 - Current \\
-%% \textbf{Wazinsure} \hfill \url{https://www.wazinsure.com}
-%% \begin{itemize} \itemsep -2pt
-%% \item Provide recommendations for software practices within the young team
-%% \item Interview candidates for the tech lead position
-%% \item Co-ordinate workflow processes within the team
-%% \end{itemize}
-
-{\sl Software Developer} \hfill November 2018 - November 2019 \\
-\textbf{PlayCo Technology \& Sibsco } \hfill \url{https://shabiki.com}
-\begin{itemize} \itemsep -2pt
-\item Design, Test and Implement features requested by the Products
-  team with an emphasis on usability(customer-oriented),
-  maintainability and scalability: Implemented mock-ups created by the
-  Products/ Design team that target low end phones that ran on
-  Opera Mini; Trouble-shot slow operations, more-so when customers
-  wanted to review their purchase history; Created a static site
-  generator that displayed relevant information to customers from a
-  spreadsheet that was maintained in-house by a separate team.
-\item Deployment, integration(M-Pesa/ SMS), maintenance and automation
-  of core fin-tech platform: Helped to write and test out Ansible
-  deployment scripts; Helped adopt the then relatively new REST M-Pesa
-  Daraja API; Trouble-shot production bugs that were related to either
-  the existing SMS or M-Pesa integration; Reviewed submitted PR’s to
-  reduce any complexity that existed in the code base.
-\item Support Work: maintain bulk messaging service in addition to
-  sending them(bulk messages) out.
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+      \textbf{Languages (advanced)}{: Python, GNU Guile, Common Lisp, Elisp} \\
+      \textbf{Programming Languages (basic):} Javascript, Haskell, Racket\\
+      \textbf{Developer Tools}{: GNU Emacs, Git, GNU/Linux, GNU Guix, Org-mode, FreeBSD, \LaTeX}
+  }}
 \end{itemize}
 
 
-    {\sl Software Engineer} \hfill November 2017 - January 2019 \\
-    \textbf{Clinton Health Access Initiative(CHAI)} \hfill \url{https://clintonhealthaccess.org}
-    \begin{itemize} \itemsep -2pt % Reduce space between items
-    \item Initiated refactoring and automated testing for the Family
-      Planning Project. Improved code coverage by about 47\%.
-    \item Introduced CI/ CD pipelines for the Family Planning Projects.
-    \item Initiated documentation for the Family Planning Project:
-      Wrote and regularly updated standard operating procedures for
-      the team's internal processes, authored a comprehensive
-      developer guide for setting up and troubleshooting the Family
-      Planning Project and documented release procedures of the Family
-      Planning Project.
-    \item Worked with the global team to onboard new developers.
-    \end{itemize}
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
 
-    {\sl Co-founder} \hfill July 2013 - December 2016\\
-    \textbf{Angstrom} \hfill \url{http://www.behance.net/angstrom_ke}\\
-    Now \textbf{Studio Aurum} \hfill \url{https://aurum.studio/}
-    \begin{itemize} \itemsep -2pt % Reduce space between items
-    \item Research and gain understanding of the market, target
-      audience and product that any communication was aimed at.
-    \item Assist in designing and creating design briefs for apps and
-      artwork as dictated by the company's clients.
-    \item Co-ordinate website projects with the UX team or outside
-      agencies.
-    \item Brainstorm and mock up design ideas.
-    \item Recommend tooling and stacks to be used by clients based on
-      their needs
-    \end{itemize}
+\resumeSubHeadingListStart
 
-    %----------------------------------------------------------------------------------------
-    %----------------------------------------------------------------------------------------
-    %   EDUCATION SECTION
-    %----------------------------------------------------------------------------------------
-    \section{EDUCATION}
+\resumeSubheading
+    {Research Software Engineer}{Mar. 2020 -- Present}
+    {GeneNetwork}{\url{https://genenetwork.org}}
 
-    {\sl MSc. Data Science and Analytics, Strathmore
-      University},\\ Nairobi, Kenya, 2021 - Ongoing
+    \resumeItemListStart
+    \resumeItem{Integrate RDF+LMDB into the \textit{GeneNetwork} Ecosystem by: creating an infrastructure implemented in GNU Guile, Python3 and Common Lisp for easily adding ad-hoc data in a way that is easily shareable to other labs globally in a semantic and FAIR way: \href{https://github.com/genenetwork/dump-genenetwork-database/}{\underline{RDF Dump}} and \href{https://github.com/BonfaceKilz/gn-dataset-dump/}{\underline{Common Lisp LMDB Matrix}}}
+    \resumeItem{Maintain \href{https://github.com/genenetwork/genenetwork2}{\underline{Genenetwork2}}: continuously refactor the code base to improve it's quality; add new features requested by the project's stake holders; review, approve, and merge submitted Pull Requests.}
+    
+    \resumeItem{Maintain \href{https://github.com/genenetwork/genenetwork3}{\underline{Genenetwork3}} REST API written in Python3 for data science and machine learning to make it more accessible to researchers in the systems genetics space: Move key logic from the archived genenetwork1 \href{https://github.com/genenetwork/genenetwork1}{\underline{code-base}}; remodel some aspects of our data model; create endpoints that perform genetics computations; review, approve, and merge submitted pull requests.}
 
-    {\sl BSc. Electrical and Electronics Engineering, University of
-      Nairobi},\\ School of Engineering, Nairobi, Kenya, 2013 - 2018
+    \resumeItem{Help research, maintain, and upstream deterministic builds of \textit{GeneNetwork}-relevant packages for GNU Guix written in GNU Guile: \href{https://gitlab.com/genenetwork/guix-bioinformatics}{\underline{guix-bioinformatics}}}
+    
+    \resumeItem{Help organise webinars/presentations organised by the Genenetwork group e.g. \href{https://libreplanet.org/wiki/FOSDEM2021-devroom-declarative-and-minimalistic-computing}{\underline{FOSDEM 2021}} and \href{https://libreplanet.org/wiki/FOSDEM2023-devroom-proposal}{\underline{FOSDEM 2023}}}
 
-    %% American resumes don't often include highschool
-    %% {\sl KCSE}, Mang’u High School, Thika, Kenya, 2008 - 2011
+    \resumeItemListEnd      
 
-    \section{WRITING \& PUBLIC SPEAKING}
+\resumeSubheading
+    {Software Engineer}{Nov. 2018 -- Nov. 2019}
+    {PlayCo Technology (Formerly knows as Sibsco)}{\url{https://shabiki.com}}
+    \resumeItemListStart
 
-    \begin{itemize}
-    \item \href{https://bonfacemunyoki.com}{\textit{Personal Blog}}: I
-      have been writing about a wide array of topics that affect me
-      and my environment
-    \item \href{https://upbookclub.com/}{\textit{Urban Perspective
-        Book Club}}: started a book-club in 2017; Meet ups occur on
-      the second Saturday of every month. Currently one of the
-      curators of the urban perspective discourse
-      \href{https://upbookclub.com}{forum} which was launched in
-      September 2020
-    \item \href{https://nairobilug.or.ke/}{\textit{Nairobi LUG}}:
-      active member and I occasionally give talks(usually centered
-      around GNU Emacs and Org-mode). We meet on the first Saturday of
-      every month.
-    \item \href{https://libremiami.org/}{\textit{Libre Miami}}: I
-      occasionally help out in public pairing sessions when packaging
-      software for Guix. Current list of TODO packages are listed
-      here:
-      \url{https://board.disroot.org/project/guix-packaging/kanban}
-    \end{itemize}
+    \resumeItem{Designed, tested and implemented features requested by the Products team with an emphasis on usability(customer-oriented), maintainability and scalability: Implemented mock-ups created by the Products/ Design team that targetted low end phones that ran on Opera Mini; Trouble-shot slow operations, more-so when customers wanted to review their purchase history; Created a static site generator that displayed relevant information to customers from a spreadsheet that was maintained in-house by a separate team.}
+    
+    \resumeItem{Deployment, integration(M-Pesa/ SMS), maintenance and automation of core fin-tech platform: Helped to write and test out Ansible deployment scripts; Helped adopt the then relatively new REST M-Pesa Daraja API; Trouble-shot production bugs that were related to either the existing SMS or M-Pesa integration; Reviewed submitted PR’s to reduce any complexity that existed in the code base.}
+    
+    \resumeItem{Support Work: maintained bulk messaging service in addition to sending them(bulk messages) out.}
 
-    %----------------------------------------------------------------------------------------
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Software Engineer}{Nov. 2017 -- Jan. 2019}
+    {Clinton Health Access Initiative}{\url{https://clintonhealthaccess.org}}
+    \resumeItemListStart
+
+    \resumeItem{Refactored and introduced automated testing to the Family Planning Project. Improved code coverage by about 47\% from zero.}
+    \resumeItem{Introduced CI/ CD pipelines to the Family Planning Projects.}
+    \resumeItem{Initiated documentation for the Family Planning Project: Wrote and regularly updated standard operating procedures for the team's internal processes, authored a comprehensive developer guide for setting up and troubleshooting the Family Planning Project and documented release procedures for the Family Planning Project.}
+    \resumeItem{Worked with the global team to onboard new developers by: providing an overview of the projects we were working on in the form of presentations, documents and discussions; providing access to the available resources (E.g. servers); and providing guidance and support during the first few weeks, usually through pairing.}
+    \resumeItemListEnd
+\clearpage
+\resumeSubheading
+    {Co-founder}{Jul. 2013 -- Dec. 2016}
+    {Angstrom (Now \textbf{Studio Aurum})}{\url{https://www.behance.net/angstrom_ke} or \url{https://aurum.studio/}}
+    \resumeItemListStart
+
+    \resumeItem{Researched and gained understanding of the market, target audience and product that any communication was aimed at.}
+    \resumeItem{Assisted in designing and creating design briefs for apps and artwork as dictated by the company's clients.}
+    \resumeItem{Co-ordinated website projects with the UX team or outside agencies.}
+    \resumeItem{Brainstormed and created mock-ups of design ideas.}
+    \resumeItem{Recommended tooling and stacks to be used by clients based on their needs.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------GRANTS-----------
+\section{Grants}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Unlocking Biomedical Data for AI Health Research in Africa Using}}{}
+    {\textbf{GeneNetwork as an Example}}{Sep. 2022 -- Sep. 2023}
+    \resumeItemListStart
+    \resumeItem{\textbf{Funding Organization:} Data Science Africa  (\url{https://www.datascienceafrica.org/})}
+    \resumeItem{\textbf{Amount Awarded:} USD 5,000}
+    \resumeItem{\textbf{Period of Grant Award:} 12 months}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Strathmore University}{Nairobi, Kenya}
+    {MSc. Data Science and Analytics, Strathmore University}{May 2021 -- Current}
+\resumeSubheading
+    {University of Nairobi}{Nairobi, Kenya}
+    {BSc. Electrical and Electronics Engineering}{2013 -- 2018}
+\resumeSubheading
+    {Mang'u High School}{Thika, Kenya}
+    {KCSE}{2008 -- 2011}
+\resumeSubHeadingListEnd    
 
 \end{document}
